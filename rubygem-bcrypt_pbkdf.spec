@@ -2,7 +2,7 @@
 %global gem_name bcrypt_pbkdf
 
 Name: rubygem-%{gem_name}
-Version: 1.0.1
+Version: 1.1.0
 Release: 1%{?dist}
 Summary: OpenBSD's bcrypt_pdkfd (a variant of PBKDF2 with bcrypt-based PRF)
 License: MIT and BSD and ISC
@@ -61,7 +61,6 @@ popd
 %dir %{gem_instdir}
 %{gem_extdir_mri}
 %exclude %{gem_instdir}/.*
-%exclude %{gem_instdir}/Gemfile.lock
 %license %{gem_instdir}/COPYING
 %{gem_libdir}
 %exclude %{gem_cache}
@@ -77,5 +76,5 @@ popd
 %{gem_instdir}/test
 
 %changelog
-* Tue Jul 14 2020 Pavel Valena <pvalena@redhat.com> - 1.0.1-1
+* Tue Jul 14 2020 Pavel Valena <pvalena@redhat.com> - 1.1.0-1
 - Initial package
