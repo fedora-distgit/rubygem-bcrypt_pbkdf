@@ -5,6 +5,12 @@ Name: rubygem-%{gem_name}
 Version: 1.1.0
 Release: 1%{?dist}
 Summary: OpenBSD's bcrypt_pdkfd (a variant of PBKDF2 with bcrypt-based PRF)
+# BSD license in files:
+#   bcrypt_pbkdf-1.0.0/ext/mri/hash_sha512.c
+#   bcrypt_pbkdf-1.0.0/ext/mri/blf.h
+#   bcrypt_pbkdf-1.0.0/ext/mri/blowfish.c
+# ISC License in file:
+#   bcrypt_pbkdf-1.0.0/ext/mri/bcrypt_pbkdf.c
 License: MIT and BSD and ISC
 URL: https://github.com/net-ssh/bcrypt_pbkdf-ruby
 Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
