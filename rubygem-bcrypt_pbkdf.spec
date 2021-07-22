@@ -7,7 +7,7 @@ Release: 1%{?dist}
 Summary: OpenBSD's bcrypt_pdkfd (a variant of PBKDF2 with bcrypt-based PRF)
 License: MIT and BSD and ISC
 URL: https://github.com/net-ssh/bcrypt_pbkdf-ruby
-Source0: %{gem_name}-%{version}.gem
+Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
 BuildRequires: ruby(release)
 BuildRequires: rubygems-devel
 BuildRequires: ruby-devel
