@@ -6,11 +6,11 @@ Version: 1.1.0
 Release: 1%{?dist}
 Summary: OpenBSD's bcrypt_pdkfd (a variant of PBKDF2 with bcrypt-based PRF)
 # BSD license in files:
-#   bcrypt_pbkdf-1.0.0/ext/mri/hash_sha512.c
-#   bcrypt_pbkdf-1.0.0/ext/mri/blf.h
-#   bcrypt_pbkdf-1.0.0/ext/mri/blowfish.c
+#   ext/mri/hash_sha512.c
+#   ext/mri/blf.h
+#   ext/mri/blowfish.c
 # ISC License in file:
-#   bcrypt_pbkdf-1.0.0/ext/mri/bcrypt_pbkdf.c
+#   ext/mri/bcrypt_pbkdf.c
 License: MIT and BSD and ISC
 URL: https://github.com/net-ssh/bcrypt_pbkdf-ruby
 Source0: https://rubygems.org/gems/%{gem_name}-%{version}.gem
@@ -40,11 +40,7 @@ Documentation for %{name}.
 %setup -q -n %{gem_name}-%{version}
 
 %build
-# Create the gem as gem install only works on a gem file
 gem build ../%{gem_name}-%{version}.gemspec
-
-# %%gem_install compiles any C extensions and installs the gem into ./%%gem_dir
-# by default, so that we can move it into the buildroot in %%install
 %gem_install
 
 %install
@@ -84,3 +80,4 @@ popd
 %changelog
 * Tue Jul 14 2020 Pavel Valena <pvalena@redhat.com> - 1.1.0-1
 - Initial package
+  Resolves: rhbz#1672601
